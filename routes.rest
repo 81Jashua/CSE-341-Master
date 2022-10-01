@@ -20,7 +20,7 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://localhost:8080/contacts/63385c82e22f41b5800e11d8 HTTP/1.1
+DELETE http://localhost:8080/contacts/633896c21dc196c1fa436da9 HTTP/1.1
 
 
 // PRODUCTION Deploy
