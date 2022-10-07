@@ -2,6 +2,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
+  // #swagger.description = 'Get all contacts in Contacts db'
   const result = await mongodb.getDb().db('CSE341').collection('contacts').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
