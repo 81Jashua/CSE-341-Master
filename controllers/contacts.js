@@ -11,6 +11,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
+  // #swagger.description = 'Get contact by contact id in Contacts db'
   const userId = new ObjectId(req.params.id);
   const result = await mongodb.getDb().db('CSE341').collection('contacts').find({ _id: userId });
   result.toArray().then((lists) => {
@@ -20,6 +21,7 @@ const getSingle = async (req, res) => {
 };
 
 const createContact = async (req, res) => {
+  // #swagger.description = 'Create a contacts in Contacts db. first, last, email, fav color, birthday'
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -36,6 +38,7 @@ const createContact = async (req, res) => {
 };
 
 const updateContact = async (req, res) => {
+  // #swagger.description = 'Update contact by id in Contacts db'
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const contact = {
@@ -59,6 +62,7 @@ const updateContact = async (req, res) => {
 };
 
 const deleteContact = async (req, res) => {
+  // #swagger.description = 'delete contact by id in Contacts db'
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db('CSE341').collection('contacts').deleteOne({ _id: userId }, true);
   console.log(response);

@@ -26,7 +26,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create a contacts in Contacts db. first, last, email, fav color, birthday",
         "parameters": [
           {
             "name": "body",
@@ -65,7 +65,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "description": "Get contact by contact id in Contacts db",
         "produces": [
           "application/json"
         ],
@@ -84,7 +84,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update contact by id in Contacts db",
         "parameters": [
           {
             "name": "id",
@@ -127,7 +127,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "delete contact by id in Contacts db",
         "parameters": [
           {
             "name": "id",
